@@ -1,0 +1,20 @@
+warframe program requirements
+
+search by prime part 
+	search by one part or full set
+		set shows if two pieces are required
+	shows drop percentage, ducats, and plat price
+		could do a range, eg 0 < low < 10 < med < 20 < high
+	shows what else drops in the same rotation 
+		drop down option, shows the full tower if selected
+	
+search by tower
+	shows drop chances of each part for the tower
+	
+search for fodder
+	separate bar
+	search for key effiency (endless) or speed (non-endless)
+		speed is ducats per run, effiency is ducats per full rotation (maybe dropdown for ducats per individual rotation as well)
+	select low, med, or high plat items to display 
+
+add/delete/edit part locations

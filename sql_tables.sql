@@ -12,21 +12,21 @@ create table if not exists parts(
 create table if not exists endless(
   ename varchar(30) not null,
   foreign key (ename) references parts(name) on delete cascade,
-  tier enum('1', '2', '3', '4', 'derelict') not null,
+  tier enum('I', 'II', 'III', 'IV', 'derelict') not null,
   type enum('survival', 'defense', 'interception') not null,
   rotation enum('A', 'B', 'C') not null,
   primary key (ename, tier, type, rotation),
   chance decimal(3,1) not null,
-  rarity enum('common', 'uncommon', 'rare', 'legendary') not null
+  rarity enum('C', 'U', 'R', 'L') not null
 );
 
 create table if not exists not_endless(
   nename varchar(30) not null,
   foreign key (nename) references parts(name) on delete cascade,
-  tier enum('1', '2', '3', '4') not null,
+  tier enum('I', 'II', 'III', 'IV') not null,
   type enum('capture', 'exterminate', 'sabotage', 'mobile defense') not null,
   primary key (nename, tier, type),
   chance decimal(3,1) not null,
-  rarity enum('common', 'uncommon', 'rare', 'legendary') not null
+  rarity enum('C', 'U', 'R', 'L') not null
 );
   

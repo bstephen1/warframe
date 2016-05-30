@@ -9,6 +9,13 @@ create table if not exists parts(
   platinum enum('low','med','high') not null
 );
 
+create table if not exists towers(
+  tier enum('I', 'II', 'III', 'IV', 'derelict') not null,
+  type enum('survival', 'defense', 'interception', 'capture', 'exterminate', 'sabotage', 'mobile defense') not null,
+  primary key (tier, type),
+  endless boolean not null
+);
+
 create table if not exists endless(
   ename varchar(30) not null,
   foreign key (ename) references parts(name) on delete cascade,

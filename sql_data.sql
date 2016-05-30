@@ -13,3 +13,5 @@ insert into towers values('I', 'survival', 1);
 insert into towers values('II', 'survival', 1);
 insert into towers values('III', 'survival', 1);
 insert into towers values('IV', 'survival', 1);
+insert into towers values('derelict', 'survival', 1);
+insert into towers values('derelict', 'defense', 1);

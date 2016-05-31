@@ -17,7 +17,7 @@ insert into not_endless values('saryn blueprint', 'III', 'exterminate', 5.6, 'U'
 insert into not_endless values('saryn blueprint', 'IV', 'exterminate', 5.6, 'U');
 insert into not_endless values('saryn systems', 'II', 'exterminate', 19.4, 'C');
 insert into not_endless values('saryn helmet', 'I', 'mobile defense', 7.5, 'U');
-insert into endless values('saryn chassis', 'III', 'survival', 'U', 5.5, 'U');
+insert into endless values('saryn chassis', 'III', 'survival', 'C', 5.5, 'U');
 
 
 insert into towers values('I', 'exterminate', 0);

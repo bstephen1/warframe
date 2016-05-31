@@ -9,7 +9,7 @@ insert into endless values('ash chassis', 'IV', 'survival', 'A', 25, 'C');
 insert into endless values('ash systems', 'III', 'survival', 'C', 5.5, 'U');
 insert into not_endless values('ash helmet', 'IV', 'sabotage', 15.5, 'C');
 
-insert into parts values('saryn blueprint', 30, 'medium');
+insert into parts values('saryn blueprint', 30, 'med');
 insert into parts values('saryn chassis', 20, 'high');
 insert into parts values('saryn helmet', 30, 'high');
 insert into parts values('saryn systems', 50, 'low');

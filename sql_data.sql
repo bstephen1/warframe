@@ -118,8 +118,80 @@ insert into parts values('loki helmet', 30, 'low');
 insert into parts values('loki systems', 50, 'high');
 
 insert into parts values('mag blueprint', 10, 'med');
-insert into parts values('mag blueprint', 10, 'med');
-insert into parts values('mag blueprint', 10, 'med');
+insert into parts values('mag chassis', 10, 'med');
+insert into parts values('mag helmet', 20, 'high');
+insert into parts values('mag systems', 20, 'high');
+
+insert into parts values('nikana blueprint', 50, 'high');
+insert into parts values('nikana blade', 50, 'high');
+insert into parts values('nikana hilt', 30, 'high');
+
+insert into parts values('nova blueprint', 10, 'low');
+insert into parts values('nova chassis', 50, 'high');
+insert into parts values('nova helmet', 20, 'low');
+insert into parts values('nova systems', 50, 'high');
+
+insert into parts values('nyx blueprint', 50, 'low');
+insert into parts values('nyx chassis', 50, 'med');
+insert into parts values('nyx helmet', 50, 'med');
+insert into parts values('nyx systems', 50, 'low');
+
+insert into parts values('odonata blueprint', 30, 'low');
+insert into parts values('odonata harness', 30, 'low');
+insert into parts values('odonata systems', 30, 'low');
+insert into parts values('odonata wings', 30, 'med');
+
+insert into parts values('orthos blueprint', 10, 'low');
+insert into parts values('orthos blade', 10, 'low');
+insert into parts values('orthos handle', 10, 'low');
+
+insert into parts values('paris blueprint', 10, 'low');
+insert into parts values('paris grip', 30, 'low');
+insert into parts values('paris lower limb', 10, 'low');
+insert into parts values('paris string', 10, 'low');
+insert into parts values('paris upper limb', 10, 'med');
+
+insert into parts values('reaper blueprint', 10, 'high');
+insert into parts values('reaper blade', 20, 'high');
+insert into parts values('reaper handle', 10, 'high');
+
+insert into parts values('rhino blueprint', 50, 'high');
+insert into parts values('rhino chassis', 10, 'high');
+insert into parts values('rhino helmet', 20, 'high');
+insert into parts values('rhino systems', 10, 'low');
+
+insert into parts values('saryn blueprint', 30, 'med');
+insert into parts values('saryn chassis', 20, 'high');
+insert into parts values('saryn helmet', 30, 'high');
+insert into parts values('saryn systems', 50, 'low');
+
+insert into parts values('scindo blueprint', 50, 'med');
+insert into parts values('scindo blade', 50, 'med');
+insert into parts values('scindo handle', 30, 'low');
+
+insert into parts values('sicarus blueprint', 20, 'med');
+insert into parts values('sicarus barrel', 10, 'low');
+insert into parts values('sicarus receiver', 50, 'high');
+
+insert into parts values('soma blueprint', 10, 'low');
+insert into parts values('soma barrel', 10, 'low');
+insert into parts values('soma receiver', 30, 'high');
+insert into parts values('soma stock', 50, 'med');
+
+insert into parts values('spira blueprint', 10, 'med');
+insert into parts values('spira barrel', 20, 'high');
+insert into parts values('spira pouch', 20, 'high');
+
+insert into parts values('trinity blueprint', 30, 'med');
+insert into parts values('trinity chassis', 30, 'low');
+insert into parts values('trinity helmet', 30, 'high');
+insert into parts values('trinity systems', 50, 'high');
+
+insert into parts values('vasto blueprint', 50, 'med');
+insert into parts values('vasto barrel', 10, 'low');
+insert into parts values('vasto receiver', 30, 'low');
+
+insert into parts values('vectis blueprint', 50, 'med');
 
 
 insert into towers values('I', 'exterminate', 0);

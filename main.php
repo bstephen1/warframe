@@ -140,38 +140,10 @@
 	?>
 	
 	<p> To do: </p>
-	<p> show drops for tower search </p>
 	<p> allow to search by set </p>
 	<p> allow multiple search items, or new searches to be added on to the bottom </p>
 	<p> get the ducats search to show best ducats </p>
 	<p> fill the database </p>
-	
-	<?php
-	/*
-		//connect to the prime part database
-		$servername = 'localhost';
-		$username = 'root';
-		$password = 'secret';
-		$db = 'warframe';
-		
-		//create connection
-		$con = new mysqli($servername, $username, $password, $db);
-		
-		// Check connection
-		if ($con->connect_error) {
-			die("Connection failed: " . $con->connect_error);
-		}
-		echo "Connected successfully<br>"; 
-		
-		//select all parts
-		$sql = "select * from parts";
-		$result = $con->query($sql);
-		for($i = 0; $i < $result->num_rows; $i++) {
-			$row = $result->fetch_assoc();
-			echo "name: " . $row["name"] . " ducats: " . $row["ducats"] . " plat: " . $row["platinum"] . "<br>";
-		}
-	*/
-	?>
 	
  </body>
 </html>

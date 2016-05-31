@@ -19,6 +19,20 @@ insert into not_endless values('saryn systems', 'II', 'exterminate', 19.4, 'C');
 insert into not_endless values('saryn helmet', 'I', 'mobile defense', 7.5, 'U');
 insert into endless values('saryn chassis', 'III', 'survival', 'C', 5.5, 'U');
 
+insert into parts values('braton blueprint', 20, 'low');
+insert into parts values('braton barrel', 30, 'low');
+insert into parts values('braton receiver', 30, 'low');
+insert into parts values('braton stock', 20, 'low');
+insert into not_endless values('braton blueprint', 'II', 'mobile defense', 19.4, 'C');
+insert into endless values('braton blueprint', 'IV', 'survival', 'C', 14.3, 'C');
+insert into endless values('braton barrel', 'III', 'defense', 'C', 7.5, 'C');
+insert into endless values('braton barrel', 'IV', 'defense', 'B', 25, 'C');
+insert into not_endless values('braton barrel', 'I', 'mobile defense', 25.8, 'C');
+insert into endless values('braton receiver', 'III', 'defense', 'C', 7.5, 'U');
+insert into endless values('braton receiver', 'IV', 'defense', 'B', 25, 'C');
+insert into endless values('braton stock', 'II', 'defense', 'C', 20, 'C');
+insert into endless values('braton stock', 'III', 'defense', 'C', 19.4, 'C');
+
 
 insert into towers values('I', 'exterminate', 0);
 insert into towers values('II', 'exterminate', 0);

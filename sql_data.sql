@@ -38,8 +38,8 @@ insert into parts values('akbronco blueprint', 10, 'low');
 insert into parts values('akbronco link', 30, 'low');
 
 insert into parts values('ankyros blueprint', 20, 'low');
-insert into parts values('ankyros blueprint', 50, 'high');
-insert into parts values('ankyros blueprint', 20, 'low');
+insert into parts values('ankyros blade', 50, 'high');
+insert into parts values('ankyros gauntlet', 20, 'low');
 
 insert into parts values('bo blueprint', 20, 'low');
 insert into parts values('bo handle', 30, 'high');
@@ -74,8 +74,8 @@ insert into parts values('dakra blade', 20, 'high');
 insert into parts values('dakra handle', 10, 'high');
 
 insert into parts values('dual kamas blueprint', 20, 'low');
-insert into parts values('dakra blade', 50, 'med');
-insert into parts values('dakra handle', 20, 'high');
+insert into parts values('dual kamas blade', 50, 'med');
+insert into parts values('dual kamas handle', 20, 'high');
 
 insert into parts values('ember blueprint', 50, 'high');
 insert into parts values('ember chassis', 10, 'high');
@@ -160,11 +160,6 @@ insert into parts values('rhino chassis', 10, 'high');
 insert into parts values('rhino helmet', 20, 'high');
 insert into parts values('rhino systems', 10, 'low');
 
-insert into parts values('saryn blueprint', 30, 'med');
-insert into parts values('saryn chassis', 20, 'high');
-insert into parts values('saryn helmet', 30, 'high');
-insert into parts values('saryn systems', 50, 'low');
-
 insert into parts values('scindo blueprint', 50, 'med');
 insert into parts values('scindo blade', 50, 'med');
 insert into parts values('scindo handle', 30, 'low');
@@ -192,6 +187,64 @@ insert into parts values('vasto barrel', 10, 'low');
 insert into parts values('vasto receiver', 30, 'low');
 
 insert into parts values('vectis blueprint', 50, 'med');
+insert into parts values('vectis barrel', 20, 'low');
+insert into parts values('vectis receiver', 50, 'high');
+insert into parts values('vectis stock', 50, 'high');
+
+insert into parts values('volt blueprint', 30, 'low');
+insert into parts values('volt chassis', 50, 'med');
+insert into parts values('volt helmet', 20, 'low');
+insert into parts values('volt systems', 30, 'high');
+
+insert into parts values('wyrm blueprint', 50, 'high');
+insert into parts values('wyrm carapace', 30, 'low');
+insert into parts values('wyrm cerebrum', 30, 'high');
+insert into parts values('wyrm systems', 30, 'med');
+
+insert into parts values('vauban blueprint', 50, 'high');
+insert into parts values('vauban chassis', 50, 'high');
+insert into parts values('vauban helmet', 50, 'high');
+insert into parts values('vauban systems', 50, 'high');
+
+insert into parts values('akstiletto blueprint', 50, 'high');
+insert into parts values('akstiletto barrel', 30, 'high');
+insert into parts values('akstiletto receiver', 30, 'high');
+insert into parts values('akstiletto link', 30, 'high');
+
+insert into parts values('fragor blueprint', 30, 'high');
+insert into parts values('fragor handle', 10, 'high');
+insert into parts values('fragor head', 30, 'low');
+
+
+insert into not_endless values('odonata blueprint', 'I', 'capture', 5.6, 'U');
+insert into not_endless values('paris grip', 'I', 'capture', 5.6, 'U');
+insert into not_endless values('paris string', 'I', 'capture', 25.8, 'C');
+insert into not_endless values('lex receiver', 'I', 'capture', 25.8, 'C');
+
+insert into not_endless values('orthos handle', 'II', 'capture', 14.3, 'U');
+insert into not_endless values('paris string', 'II', 'capture', 14.3, 'U');
+insert into not_endless values('orthos blade', 'II', 'capture', 14.3, 'U');
+insert into not_endless values('volt blueprint', 'II', 'capture', 14.3, 'U');
+insert into not_endless values('nyx blueprint', 'II', 'capture', 14.3, 'U');
+insert into not_endless values('kavasa band', 'II', 'capture', 14.3, 'U');
+
+insert into not_endless values('nikana hilt', 'III', 'capture', 5.6, 'U');
+insert into not_endless values('spira pouch', 'III', 'capture', 5.6, 'U');
+insert into not_endless values('akbronco link', 'III', 'capture', 5.6, 'U');
+insert into not_endless values('dual kamas blade', 'III', 'capture', 25.8, 'C');
+insert into not_endless values('burston barrel', 'III', 'capture', 25.8, 'C');
+insert into not_endless values('lex barrel', 'III', 'capture', 25.8, 'C');
+
+insert into not_endless values('nyx systems', 'IV', 'capture', 19.4, 'C');
+insert into not_endless values('bronco receiver', 'IV', 'capture', 19.4, 'C');
+insert into not_endless values('volt blueprint', 'IV', 'capture', 11.3, 'U');
+insert into not_endless values('akbronco link', 'IV', 'capture', 19.4, 'C');
+
+insert into endless values('vasto receiver', 'I', 'defense', 'C', 11.3, 'U');
+insert into endless values('carrier systems', 'I', 'defense', 'C', 25.8, 'C');
+insert into endless values('hikou stars', 'I', 'defense', 'C', 25.8, 'C');
+insert into endless values('scindo handle', 'I', 'defense', 'C', 25.8, 'C');
+
 
 
 insert into towers values('I', 'exterminate', 0);

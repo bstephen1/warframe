@@ -24,7 +24,7 @@ create table if not exists endless(
   rotation enum('A', 'B', 'C') not null,
   primary key (ename, tier, type, rotation),
   chance decimal(3,1) not null,
-  rarity enum('C', 'U', 'R', 'L') not null
+  rarity enum('C', 'U', 'R') not null
 );
 
 create table if not exists not_endless(
@@ -34,6 +34,6 @@ create table if not exists not_endless(
   type enum('capture', 'exterminate', 'sabotage', 'mobile defense') not null,
   primary key (nename, tier, type),
   chance decimal(3,1) not null,
-  rarity enum('C', 'U', 'R', 'L') not null
+  rarity enum('C', 'U', 'R') not null
 );
   

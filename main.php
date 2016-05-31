@@ -68,10 +68,18 @@
 			<option>efficiency</option>
 		</select>
 		<select name='plat'>
-			<option  selected disabled hidden>plat...</option>
+			<option selected disabled hidden>plat...</option>
 			<option>low</option>
-			<option>medium</option>
+			<option>med</option>
 			<option>high</option>
+		</select>
+		<select name='amount'>
+			<option selected disabled hidden>results...</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
 		</select>
 		<input type='submit' name = 'ducats' value='confirm'>
 		</p>
@@ -81,8 +89,53 @@
 	<?php 
 	//if ducats form has been submitted
 	if(isset($_GET['ducats'])){
-		echo "Best ducat farm for " . $_GET['type'] . " with " . $_GET['plat'] . " platinum cost: "; 
-	 }
+		$type = $_GET['type'];
+		$plat = $_GET['plat'];
+		$amount = $_GET['amount'];
+		echo "Best ducat farm for " . $type . " with " . $plat . " platinum cost:<br>"; 
+		
+		if($type === 'speed'){
+			//low plat only
+			if($plat === 'low'){
+			$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from not_endless join parts on nename=name where platinum='low' group by type, tier order by farm desc";
+			}
+			//low and medium
+			else if($plat === 'med'){
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from not_endless join parts on nename=name where platinum='low' or platinum='med' group by type, tier order by farm desc";
+			}
+			//low, medium, and high
+			else if($plat === 'high'){
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from not_endless join parts on nename=name group by type, tier order by farm desc";
+			}
+			$results = $con->query($sql);
+			echo "Ducats per key:<br>";
+				for($i = 0; $i < $amount; $i++){
+					$row = $results->fetch_assoc();
+					echo $row['type'] . " " . $row['tier'] . ": " . $row['farm'] . "<br>";
+				}
+		}
+		else if($type === 'efficiency'){
+			//low plat only
+			if($plat === 'low'){
+			$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from endless join parts on ename=name where platinum='low' group by type, tier order by farm desc";
+			}
+			//low and medium
+			else if($plat === 'med'){
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from endless join parts on ename=name where platinum='low' or platinum='med' group by type, tier order by farm desc";
+			}
+			//low, medium, and high
+			else if($plat === 'high'){
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from endless join parts on ename=name group by type, tier order by farm desc";
+			}
+			$results = $con->query($sql);
+			echo "Ducats per full rotation:<br>";
+				for($i = 0; $i < $amount; $i++){
+					$row = $results->fetch_assoc();
+					echo $row['type'] . " " . $row['tier'] . ": " . $row['farm'] . "<br>";
+				}
+		}
+	}
+	 
 	//if prime parts bar has been submitted
 	else if(isset($_GET['parts'])){
 		//display the part name, ducats value, and plat price
@@ -142,7 +195,8 @@
 	<p> To do: </p>
 	<p> allow to search by set </p>
 	<p> allow multiple search items, or new searches to be added on to the bottom </p>
-	<p> get the ducats search to show best ducats </p>
+	<p> endless ducats shows breakdown by each rotation </p>
+	<p> old searches still visible </p>
 	<p> fill the database </p>
 	
  </body>

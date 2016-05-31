@@ -38,7 +38,7 @@
 		</p>
 	</form>
 	
-	<? //towers select box ?>
+<? //towers select box ?>
 	<form method="get">
 		<p>Search by tower: 
 		<select name='tower'>
@@ -49,13 +49,7 @@
 					$row = $towers->fetch_assoc();
 					$type = $row['type']; 
 					$tier = $row['tier']; ?>
-					<option><?php 
-						if($tier === 'derelict') {
-							echo $type . " (" . $tier . ")";
-						}
-						else {
-							echo $type . " " . $tier; 
-						} ?>
+					<option><?php echo $type . " " . $tier; ?>
 					</option>
 					<?php 
 				}
@@ -119,19 +113,33 @@
 		$sql = "select endless from towers where type like'" . $type . "%'";
 		$result = $con->query($sql);
 		$row = $result->fetch_assoc();
+		//split the tower into type and tier
+		$tower = explode(" ", $_GET['tower']);
+		//accound for mobile defense
+		if($tower[0] === 'mobile' and $tower[1] === 'defense'){
+			$tower[0] = $tower[0] . " " . $tower[1];
+			$tower[1] = $tower[2];
+		}
+		$type = $tower[0];
+		$tier = $tower[1];
 		//search endless table for all drops
 		if($row['endless']) {
 			echo 'you selected an endless tower.';
+			echo $type . " " . $tier;
 		}
 		//search not_endless table for all drops
 		else {
-			echo 'you selected a non-endless tower.';
+			echo $type . " " . $tier . "<br>";
+			$drops = $con->query("select * from not_endless where type='" . $type . "' and tier='" . $tier . "'");
+			for($i = 0; $i < $drops->num_rows; $i++){
+				$row = $drops->fetch_assoc();
+				echo $row['nename'] . ": " . $row['chance'] . "<br>";
+			}
 		}
 	}
 	?>
 	
 	<p> To do: </p>
-	<p> show drops for tower search </p>
 	<p> allow to search by set </p>
 	<p> allow multiple search items, or new searches to be added on to the bottom </p>
 	<p> get the ducats search to show best ducats </p>

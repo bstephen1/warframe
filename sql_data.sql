@@ -174,7 +174,7 @@ insert into parts values('soma receiver', 30, 'high');
 insert into parts values('soma stock', 50, 'med');
 
 insert into parts values('spira blueprint', 10, 'med');
-insert into parts values('spira barrel', 20, 'high');
+insert into parts values('spira blade', 20, 'high');
 insert into parts values('spira pouch', 20, 'high');
 
 insert into parts values('trinity blueprint', 30, 'med');
@@ -273,8 +273,134 @@ insert into endless values('carrier carapace', 'IV', 'defense', 'C', 19.4, 'C');
 insert into endless values('burston receiver', 'IV', 'defense', 'C', 19.4, 'C');
 insert into endless values('hikou pouch', 'IV', 'defense', 'C', 19.4, 'C');
 
+insert into not_endless values('scindo blueprint', 'I', 'exterminate', 7.5, 'U');
+insert into not_endless values('fragor blueprint', 'I', 'exterminate', 7.5, 'U');
+insert into not_endless values('burston stock', 'I', 'exterminate', 25.8, 'C');
 
+insert into not_endless values('carrier cerebrum', 'II', 'exterminate', 7.5, 'U');
+insert into not_endless values('volt systems', 'II', 'exterminate', 7.5, 'U');
+insert into not_endless values('orthos blueprint', 'II', 'exterminate', 7.5, 'U');
+insert into not_endless values('volt helmet', 'II', 'exterminate', 19.4, 'C');
+insert into not_endless values('nova blueprint', 'II', 'exterminate', 19.4, 'C');
 
+insert into not_endless values('nyx chassis', 'III', 'exterminate', 5.6, 'U');
+insert into not_endless values('soma stock', 'III', 'exterminate', 5.6, 'U');
+insert into not_endless values('nikana blueprint', 'III', 'exterminate', 5.6, 'U');
+insert into not_endless values('vasto receiver', 'III', 'exterminate', 38.7, 'C');
+insert into not_endless values('nyx systems', 'III', 'exterminate', 38.7, 'C');
+
+insert into not_endless values('kavasa buckle', 'IV', 'exterminate', 5.6, 'U');
+insert into not_endless values('vectis receiver', 'IV', 'exterminate', 5.6, 'U');
+insert into not_endless values('odonata harness', 'IV', 'exterminate', 25.8, 'C');
+insert into not_endless values('hikou pouch', 'IV', 'exterminate', 25.8, 'C');
+
+insert into endless values('carrier blueprint', 'IV', 'interception', 'A', 25, 'U');
+insert into endless values('akbronco blueprint', 'IV', 'interception', 'A', 25, 'U');
+insert into endless values('kavasa blueprint', 'IV', 'interception', 'A', 25, 'U');
+insert into endless values('vectis barrel', 'IV', 'interception', 'B', 25, 'U');
+insert into endless values('hikou blueprint', 'IV', 'interception', 'B', 25, 'U');
+insert into endless values('akstiletto barrel', 'IV', 'interception', 'C', 14.3, 'C');
+insert into endless values('soma barrel', 'IV', 'interception', 'C', 14.3, 'C');
+insert into endless values('fang handle', 'IV', 'interception', 'C', 14.3, 'C');
+insert into endless values('lex receiver', 'IV', 'interception', 'C', 14.3, 'C');
+insert into endless values('paris grip', 'IV', 'interception', 'C', 14.3, 'C');
+insert into endless values('bronco barrel', 'IV', 'interception', 'C', 14.3, 'C');
+
+insert into not_endless values('vectis blueprint', 'I', 'mobile defense', 7.5, 'U');
+
+insert into not_endless values('burston blueprint', 'II', 'mobile defense', 19.4, 'C');
+insert into not_endless values('vasto barrel', 'II', 'mobile defense', 19.4, 'C');
+insert into not_endless values('spira blueprint', 'II', 'mobile defense', 19.4, 'C');
+insert into not_endless values('nyx helmet', 'II', 'mobile defense', 11.3, 'U');
+insert into not_endless values('vasto blueprint', 'II', 'mobile defense', 11.3, 'U');
+
+insert into not_endless values('vectis stock', 'III', 'mobile defense', 11.3, 'U');
+insert into not_endless values('trinity systems', 'III', 'mobile defense', 11.3, 'U');
+insert into not_endless values('scindo blade', 'III', 'mobile defense', 11.3, 'U');
+insert into not_endless values('spira blade', 'III', 'mobile defense', 11.3, 'U');
+insert into not_endless values('soma barrel', 'III', 'mobile defense', 25.8, 'C');
+insert into not_endless values('burston receiver', 'III', 'mobile defense', 25.8, 'C');
+
+insert into not_endless values('carrier carapace', 'IV', 'mobile defense', 16.7, 'U');
+insert into not_endless values('kavasa blueprint', 'IV', 'mobile defense', 16.7, 'U');
+insert into not_endless values('vasto receiver', 'IV', 'mobile defense', 16.7, 'U');
+insert into not_endless values('spira blueprint', 'IV', 'mobile defense', 16.7, 'U');
+
+insert into not_endless values('scindo handle', 'I', 'sabotage', 11.3, 'U');
+insert into not_endless values('odonata harness', 'I', 'sabotage', 11.3, 'U');
+insert into not_endless values('hikou stars', 'I', 'sabotage', 19.4, 'C');
+insert into not_endless values('nova blueprint', 'I', 'sabotage', 19.4, 'C');
+insert into not_endless values('odonata systems', 'I', 'sabotage', 19.4, 'C');
+insert into not_endless values('vasto barrel', 'I', 'sabotage', 19.4, 'C');
+
+insert into not_endless values('nyx helmet', 'II', 'sabotage', 5.6, 'U');
+insert into not_endless values('vauban helmet', 'II', 'sabotage', 5.6, 'U');
+insert into not_endless values('volt chassis', 'II', 'sabotage', 5.6, 'U');
+insert into not_endless values('trinity helmet', 'II', 'sabotage', 5.6, 'U');
+insert into not_endless values('hikou blueprint', 'II', 'sabotage', 25.8, 'C');
+insert into not_endless values('hikou pouch', 'II', 'sabotage', 25.8, 'C');
+insert into not_endless values('bronco blueprint', 'II', 'sabotage', 25.8, 'C');
+
+insert into not_endless values('nyx blueprint', 'III', 'sabotage', 25.3, 'C');
+insert into not_endless values('soma barrel', 'III', 'sabotage', 25.3, 'C');
+insert into not_endless values('scindo blade', 'III', 'sabotage', 5.5, 'U');
+insert into not_endless values('nova helmet', 'III', 'sabotage', 5.5, 'U');
+insert into not_endless values('bronco barrel', 'III', 'sabotage', 5.5, 'U');
+insert into not_endless values('vauban blueprint', 'III', 'sabotage', 5.5, 'U');
+
+insert into not_endless values('akstiletto receiver', 'IV', 'sabotage', 7.5, 'U');
+insert into not_endless values('kavasa band', 'IV', 'sabotage', 7.5, 'U');
+insert into not_endless values('nyx systems', 'IV', 'sabotage', 15.5, 'C');
+insert into not_endless values('carrier systems', 'IV', 'sabotage', 15.5, 'C');
+insert into not_endless values('fragor head', 'IV', 'sabotage', 15.5, 'C');
+insert into not_endless values('nova helmet', 'IV', 'sabotage', 15.5, 'C');
+
+insert into endless values('burston barrel', 'I', 'survival', 'A', 16.7, 'C');
+insert into endless values('odonata systems', 'I', 'survival', 'A', 16.7, 'C');
+insert into endless values('scindo handle', 'I', 'survival', 'C', 7.5, 'U');
+insert into endless values('paris upper limb', 'I', 'survival', 'C', 7.5, 'U');
+insert into endless values('volt systems', 'I', 'survival', 'C', 7.5, 'U');
+insert into endless values('paris lower limb', 'I', 'survival', 'C', 25.8, 'C');
+insert into endless values('burston stock', 'I', 'survival', 'C', 25.8, 'C');
+insert into endless values('nova helmet', 'I', 'survival', 'C', 25.8, 'C');
+
+insert into endless values('akbronco blueprint', 'II', 'survival', 'A', 20, 'C');
+insert into endless values('paris lower limb', 'II', 'survival', 'A', 20, 'C');
+insert into endless values('soma blueprint', 'II', 'survival', 'B', 20, 'U');
+insert into endless values('fang blade', 'II', 'survival', 'B', 20, 'U');
+insert into endless values('hikou blueprint', 'II', 'survival', 'B', 20, 'U');
+insert into endless values('burston receiver', 'II', 'survival', 'C', 7.5, 'U');
+insert into endless values('soma receiver', 'II', 'survival', 'C', 7.5, 'U');
+insert into endless values('nikana blade', 'II', 'survival', 'C', 7.5, 'U');
+insert into endless values('paris blueprint', 'II', 'survival', 'C', 19.4, 'C');
+insert into endless values('bronco blueprint', 'II', 'survival', 'C', 19.4, 'C');
+insert into endless values('trinity chassis', 'II', 'survival', 'C', 19.4, 'C');
+
+insert into endless values('fang blueprint', 'III', 'survival', 'A', 20, 'U');
+insert into endless values('fang blade', 'III', 'survival', 'A', 20, 'U');
+insert into endless values('vectis barrel', 'III', 'survival', 'B', 20, 'U');
+insert into endless values('lex barrel', 'III', 'survival', 'B', 20, 'U');
+insert into endless values('volt helmet', 'III', 'survival', 'B', 20, 'U');
+insert into endless values('nova chassis', 'III', 'survival', 'C', 5.5, 'U');
+insert into endless values('vauban systems', 'III', 'survival', 'C', 5.5, 'U');
+insert into endless values('lex blueprint', 'III', 'survival', 'C', 25.3, 'C');
+insert into endless values('carrier blueprint', 'III', 'survival', 'C', 25.3, 'C');
+insert into endless values('dual kamas blueprint', 'III', 'survival', 'C', 25.3, 'C');
+
+insert into endless values('dual kamas blueprint', 'IV', 'survival', 'A', 25, 'C');
+insert into endless values('orthos blueprint', 'IV', 'survival', 'B', 25, 'C');
+insert into endless values('bronco receiver', 'IV', 'survival', 'B', 25, 'C');
+insert into endless values('lex barrel', 'IV', 'survival', 'B', 25, 'C');
+insert into endless values('akstiletto link', 'IV', 'survival', 'C', 14.3, 'U');
+insert into endless values('odonata wings', 'IV', 'survival', 'C', 14.3, 'U');
+insert into endless values('vasto blueprint', 'IV', 'survival', 'C', 14.3, 'U');
+
+insert into endless values('burston barrel', 'derelict', 'survival', 'C', 19.4, 'C');
+insert into endless values('nova systems', 'derelict', 'survival', 'C', 11.3, 'U');
+
+insert into endless values('trinity blueprint', 'derelict', 'defense', 'C', 12.9, 'C');
+insert into endless values('dual kamas handle', 'derelict', 'defense', 'C', 7.5, 'U');
+insert into endless values('soma stock', 'derelict', 'defense', 'C', 7.5, 'U');
 
 
 insert into towers values('I', 'exterminate', 0);

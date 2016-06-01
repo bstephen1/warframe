@@ -245,6 +245,36 @@ insert into endless values('carrier systems', 'I', 'defense', 'C', 25.8, 'C');
 insert into endless values('hikou stars', 'I', 'defense', 'C', 25.8, 'C');
 insert into endless values('scindo handle', 'I', 'defense', 'C', 25.8, 'C');
 
+insert into endless values('soma blueprint', 'II', 'defense', 'A', 20, 'U');
+insert into endless values('orthos blade', 'II', 'defense', 'A', 20, 'U');
+insert into endless values('burston stock', 'II', 'defense', 'B', 25, 'U');
+insert into endless values('paris blueprint', 'II', 'defense', 'B', 25, 'U');
+insert into endless values('fang handle', 'II', 'defense', 'C', 20, 'U');
+insert into endless values('lex receiver', 'II', 'defense', 'C', 20, 'U');
+insert into endless values('paris upper limb', 'II', 'defense', 'C', 20, 'U');
+insert into endless values('fang blueprint', 'II', 'defense', 'C', 20, 'U');
+
+insert into endless values('trinity chassis', 'III', 'defense', 'A', 25, 'C');
+insert into endless values('lex blueprint', 'III', 'defense', 'B', 20, 'U');
+insert into endless values('paris string', 'III', 'defense', 'B', 20, 'U');
+insert into endless values('burston blueprint', 'III', 'defense', 'B', 20, 'U');
+insert into endless values('nyx blueprint', 'III', 'defense', 'C', 19.4, 'C');
+insert into endless values('fragor handle', 'III', 'defense', 'C', 19.4, 'C');
+
+insert into endless values('lex blueprint', 'IV', 'defense', 'A', 20, 'U');
+insert into endless values('orthos blueprint', 'IV', 'defense', 'A', 20, 'U');
+insert into endless values('vectis barrel', 'IV', 'defense', 'A', 20, 'U');
+insert into endless values('carrier systems', 'IV', 'defense', 'B', 25, 'C');
+insert into endless values('akstiletto blueprint', 'IV', 'defense', 'C', 5.6, 'U');
+insert into endless values('vauban chassis', 'IV', 'defense', 'C', 5.6, 'U');
+insert into endless values('trinity blueprint', 'IV', 'defense', 'C', 5.6, 'U');
+insert into endless values('odonata blueprint', 'IV', 'defense', 'C', 19.4, 'C');
+insert into endless values('carrier carapace', 'IV', 'defense', 'C', 19.4, 'C');
+insert into endless values('burston receiver', 'IV', 'defense', 'C', 19.4, 'C');
+insert into endless values('hikou pouch', 'IV', 'defense', 'C', 19.4, 'C');
+
+
+
 
 
 insert into towers values('I', 'exterminate', 0);

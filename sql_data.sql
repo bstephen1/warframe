@@ -430,3 +430,204 @@ insert into towers values('IV', 'defense', 1);
 insert into towers values('IV', 'interception', 1);
 insert into towers values('derelict', 'survival', 1);
 insert into towers values('derelict', 'defense', 1);
+
+
+insert into sets values('ash set', 'ash blueprint', 1);
+insert into sets values('ash set', 'ash chassis', 1);
+insert into sets values('ash set', 'ash helmet', 1);
+insert into sets values('ash set', 'ash systems', 1);
+
+insert into sets values('loki set', 'loki blueprint', 1);
+insert into sets values('loki set', 'loki chassis', 1);
+insert into sets values('loki set', 'loki helmet', 1);
+insert into sets values('loki set', 'loki systems', 1);
+
+insert into sets values('nova set', 'nova blueprint', 1);
+insert into sets values('nova set', 'nova chassis', 1);
+insert into sets values('nova set', 'nova helmet', 1);
+insert into sets values('nova set', 'nova systems', 1);
+
+insert into sets values('nyx set', 'nyx blueprint', 1);
+insert into sets values('nyx set', 'nyx chassis', 1);
+insert into sets values('nyx set', 'nyx helmet', 1);
+insert into sets values('nyx set', 'nyx systems', 1);
+
+insert into sets values('saryn set', 'saryn blueprint', 1);
+insert into sets values('saryn set', 'saryn chassis', 1);
+insert into sets values('saryn set', 'saryn helmet', 1);
+insert into sets values('saryn set', 'saryn systems', 1);
+
+insert into sets values('trinity set', 'trinity blueprint', 1);
+insert into sets values('trinity set', 'trinity chassis', 1);
+insert into sets values('trinity set', 'trinity helmet', 1);
+insert into sets values('trinity set', 'trinity systems', 1);
+
+insert into sets values('volt set', 'volt blueprint', 1);
+insert into sets values('volt set', 'volt chassis', 1);
+insert into sets values('volt set', 'volt helmet', 1);
+insert into sets values('volt set', 'volt systems', 1);
+
+insert into sets values('frost set', 'frost blueprint', 1);
+insert into sets values('frost set', 'frost carapace', 1);
+insert into sets values('frost set', 'frost cerebrum', 1);
+insert into sets values('frost set', 'frost systems', 1);
+
+insert into sets values('ember set', 'ember blueprint', 1);
+insert into sets values('ember set', 'ember carapace', 1);
+insert into sets values('ember set', 'ember cerebrum', 1);
+insert into sets values('ember set', 'ember systems', 1);
+
+insert into sets values('mag set', 'mag blueprint', 1);
+insert into sets values('mag set', 'mag carapace', 1);
+insert into sets values('mag set', 'mag cerebrum', 1);
+insert into sets values('mag set', 'mag systems', 1);
+
+insert into sets values('vauban set', 'vauban blueprint', 1);
+insert into sets values('vauban set', 'vauban chassis', 1);
+insert into sets values('vauban set', 'vauban helmet', 1);
+insert into sets values('vauban set', 'vauban systems', 1);
+
+insert into sets values('rhino set', 'rhino blueprint', 1);
+insert into sets values('rhino set', 'rhino carapace', 1);
+insert into sets values('rhino set', 'rhino cerebrum', 1);
+insert into sets values('rhino set', 'rhino systems', 1);
+
+insert into sets values('carrier set', 'carrier blueprint', 1);
+insert into sets values('carrier set', 'carrier carapace', 1);
+insert into sets values('carrier set', 'carrier cerebrum', 1);
+insert into sets values('carrier set', 'carrier systems', 1);
+
+insert into sets values('wyrm set', 'wyrm blueprint', 1);
+insert into sets values('wyrm set', 'wyrm carapace', 1);
+insert into sets values('wyrm set', 'wyrm cerebrum', 1);
+insert into sets values('wyrm set', 'wyrm systems', 1);
+
+insert into sets values('kavasa set', 'kavasa blueprint', 1);
+insert into sets values('kavasa set', 'kavasa band', 1);
+insert into sets values('kavasa set', 'kavasa buckle', 1);
+
+insert into sets values('odonata set', 'odonata blueprint', 1);
+insert into sets values('odonata set', 'odonata wings', 1);
+insert into sets values('odonata set', 'odonata harness', 1);
+insert into sets values('odonata set', 'odonata systems', 1);
+
+insert into sets values('braton set', 'braton blueprint', 1);
+insert into sets values('braton set', 'braton barrel', 1);
+insert into sets values('braton set', 'braton receiver', 1);
+insert into sets values('braton set', 'braton stock', 1);
+
+insert into sets values('burston set', 'burston blueprint', 1);
+insert into sets values('burston set', 'burston barrel', 1);
+insert into sets values('burston set', 'burston receiver', 1);
+insert into sets values('burston set', 'burston stock', 1);
+
+insert into sets values('soma set', 'soma blueprint', 1);
+insert into sets values('soma set', 'soma barrel', 1);
+insert into sets values('soma set', 'soma receiver', 1);
+insert into sets values('soma set', 'soma stock', 1);
+
+insert into sets values('vectis set', 'vectis blueprint', 1);
+insert into sets values('vectis set', 'vectis barrel', 1);
+insert into sets values('vectis set', 'vectis receiver', 1);
+insert into sets values('vectis set', 'vectis stock', 1);
+
+insert into sets values('boar set', 'boar blueprint', 1);
+insert into sets values('boar set', 'boar barrel', 1);
+insert into sets values('boar set', 'boar receiver', 1);
+insert into sets values('boar set', 'boar stock', 1);
+
+insert into sets values('boltor set', 'boltor blueprint', 1);
+insert into sets values('boltor set', 'boltor barrel', 1);
+insert into sets values('boltor set', 'boltor receiver', 1);
+insert into sets values('boltor set', 'boltor stock', 1);
+
+insert into sets values('latron set', 'latron blueprint', 1);
+insert into sets values('latron set', 'latron barrel', 1);
+insert into sets values('latron set', 'latron receiver', 1);
+insert into sets values('latron set', 'latron stock', 1);
+
+insert into sets values('paris set', 'paris blueprint', 1);
+insert into sets values('paris set', 'paris grip', 1);
+insert into sets values('paris set', 'paris string', 1);
+insert into sets values('paris set', 'paris upper limb', 1);
+insert into sets values('paris set', 'paris lower limb', 1);
+
+insert into sets values('bronco set', 'bronco blueprint', 1);
+insert into sets values('bronco set', 'bronco barrel', 1);
+insert into sets values('bronco set', 'bronco receiver', 1);
+
+insert into sets values('lex set', 'lex blueprint', 1);
+insert into sets values('lex set', 'lex barrel', 1);
+insert into sets values('lex set', 'lex receiver', 1);
+
+insert into sets values('sicarus set', 'sicarus blueprint', 1);
+insert into sets values('sicarus set', 'sicarus barrel', 1);
+insert into sets values('sicarus set', 'sicarus receiver', 1);
+
+insert into sets values('vasto set', 'vasto blueprint', 1);
+insert into sets values('vasto set', 'vasto barrel', 1);
+insert into sets values('vasto set', 'vasto receiver', 1);
+
+insert into sets values('spira set', 'spira blueprint', 1);
+insert into sets values('spira set', 'spira pouch', 2);
+insert into sets values('spira set', 'spira blade', 2);
+
+insert into sets values('hikou set', 'hikou blueprint', 1);
+insert into sets values('hikou set', 'hikou pouch', 2);
+insert into sets values('hikou set', 'hikou stars', 2);
+
+insert into sets values('akstiletto set', 'akstiletto blueprint', 1);
+insert into sets values('akstiletto set', 'akstiletto barrel', 2);
+insert into sets values('akstiletto set', 'akstiletto receiver', 2);
+insert into sets values('akstiletto set', 'akstiletto link', 1);
+
+insert into sets values('akbronco set', 'akbronco blueprint', 1);
+insert into sets values('akbronco set', 'bronco barrel', 2);
+insert into sets values('akbronco set', 'bronco receiver', 2);
+insert into sets values('akbronco set', 'bronco blueprint', 2);
+insert into sets values('akbronco set', 'akbronco link', 1);
+
+insert into sets values('ankyros set', 'ankyros blueprint', 1);
+insert into sets values('ankyros set', 'ankyros blade', 2);
+insert into sets values('ankyros set', 'ankyros gauntlet', 2);
+
+insert into sets values('bo set', 'bo blueprint', 1);
+insert into sets values('bo set', 'bo ornament', 2);
+insert into sets values('bo set', 'bo handle', 1);
+
+insert into sets values('dakra set', 'dakra blueprint', 1);
+insert into sets values('dakra set', 'dakra blade', 1);
+insert into sets values('dakra set', 'dakra handle', 1);
+
+insert into sets values('nikana set', 'nikana blueprint', 1);
+insert into sets values('nikana set', 'nikana blade', 1);
+insert into sets values('nikana set', 'nikana hilt', 1);
+
+insert into sets values('reaper set', 'reaper blueprint', 1);
+insert into sets values('reaper set', 'reaper blade', 1);
+insert into sets values('reaper set', 'reaper handle', 1);
+
+insert into sets values('scindo set', 'scindo blueprint', 1);
+insert into sets values('scindo set', 'scindo blade', 1);
+insert into sets values('scindo set', 'scindo handle', 1);
+
+insert into sets values('glaive set', 'glaive blueprint', 1);
+insert into sets values('glaive set', 'glaive blade', 2);
+insert into sets values('glaive set', 'glaive disc', 1);
+
+insert into sets values('dual kamas set', 'dual kamas blueprint', 1);
+insert into sets values('dual kamas set', 'dual kamas blade', 2);
+insert into sets values('dual kamas set', 'dual kamas handle', 2);
+
+insert into sets values('fang set', 'fang blueprint', 1);
+insert into sets values('fang set', 'fang blade', 2);
+insert into sets values('fang set', 'fang handle', 2);
+
+insert into sets values('fragor set', 'fragor blueprint', 1);
+insert into sets values('fragor set', 'fragor head', 1);
+insert into sets values('fragor set', 'fragor handle', 1);
+
+insert into sets values('orthos set', 'orthos blueprint', 1);
+insert into sets values('orthos set', 'orthos blade', 2);
+insert into sets values('orthos set', 'orthos handle', 1);
+

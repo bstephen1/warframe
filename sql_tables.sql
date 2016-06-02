@@ -9,6 +9,14 @@ create table if not exists parts(
   platinum enum('low','med','high') not null
 );
 
+create table if not exists sets(
+  sname varchar(30) not null unique,
+  primary key (sname),
+  part varchar(30) not null,
+  foreign key (part) references parts(name) on delete cascade,
+  amount decimal(1) not null
+);
+
 create table if not exists towers(
   tier enum('I', 'II', 'III', 'IV', 'derelict') not null,
   type enum('survival', 'defense', 'interception', 'capture', 'exterminate', 'sabotage', 'mobile defense') not null,

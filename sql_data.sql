@@ -488,8 +488,8 @@ insert into sets values('vauban set', 'vauban helmet', 1);
 insert into sets values('vauban set', 'vauban systems', 1);
 
 insert into sets values('rhino set', 'rhino blueprint', 1);
-insert into sets values('rhino set', 'rhino carapace', 1);
-insert into sets values('rhino set', 'rhino cerebrum', 1);
+insert into sets values('rhino set', 'rhino chassis', 1);
+insert into sets values('rhino set', 'rhino helmet', 1);
 insert into sets values('rhino set', 'rhino systems', 1);
 
 insert into sets values('carrier set', 'carrier blueprint', 1);

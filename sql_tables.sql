@@ -11,9 +11,9 @@ create table if not exists parts(
 
 create table if not exists sets(
   sname varchar(30) not null unique,
-  primary key (sname),
   part varchar(30) not null,
   foreign key (part) references parts(name) on delete cascade,
+  primary key (sname, part),
   amount decimal(1) not null
 );
 

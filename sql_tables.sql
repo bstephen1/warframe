@@ -10,7 +10,7 @@ create table if not exists parts(
 );
 
 create table if not exists sets(
-  sname varchar(30) not null unique,
+  sname varchar(30) not null,
   part varchar(30) not null,
   foreign key (part) references parts(name) on delete cascade,
   primary key (sname, part),

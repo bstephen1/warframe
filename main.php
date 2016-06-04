@@ -32,6 +32,13 @@
 					<option><?php echo $name; ?></option>
 					<?php 
 				}
+				$sets = $con->query("select distinct sname from sets");
+				for($i = 0; $i < $sets->num_rows; $i++){
+					$row = $sets->fetch_assoc();
+					$set = $row['sname']; ?>
+					<option><?php echo $set; ?></option>
+					<?php
+				}
 			?>
 		</select>	
 		<input type='submit' name = 'parts' value='confirm'>
@@ -80,6 +87,7 @@
 			<option>3</option>
 			<option>4</option>
 			<option>5</option>
+			<option>all</option>
 		</select>
 		<input type='submit' name = 'ducats' value='confirm'>
 		</p>
@@ -97,67 +105,67 @@
 		if($type === 'speed'){
 			//low plat only
 			if($plat === 'low'){
-			$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from not_endless join parts on nename=name where platinum='low' group by type, tier order by farm desc";
+			$sql = "select truncate(if(strcmp(type, 'sabotage'), sum(ducats * (chance / 100)), sum(ducats * (chance / 100)) * 2), 2) as farm, type, tier from not_endless join parts on nename=name where platinum='low' group by type, tier order by farm desc";
 			}
 			//low and medium
 			else if($plat === 'med'){
-				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from not_endless join parts on nename=name where platinum='low' or platinum='med' group by type, tier order by farm desc";
+				$sql = "select truncate(if(strcmp(type, 'sabotage'), sum(ducats * (chance / 100)), sum(ducats * (chance / 100)) * 2), 2) as farm, type, tier from not_endless join parts on nename=name where platinum='low' or platinum='med' group by type, tier order by farm desc";
 			}
 			//low, medium, and high
 			else if($plat === 'high'){
-				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from not_endless join parts on nename=name group by type, tier order by farm desc";
+				$sql = "select truncate(if(strcmp(type, 'sabotage'), sum(ducats * (chance / 100)), sum(ducats * (chance / 100)) * 2), 2) as farm, type, tier from not_endless join parts on nename=name group by type, tier order by farm desc";
 			}
 			$results = $con->query($sql);
 			echo "Ducats per key:<br>";
-				for($i = 0; $i < $amount; $i++){
-					$row = $results->fetch_assoc();
-					echo $row['type'] . " " . $row['tier'] . ": " . $row['farm'] . "<br>";
-				}
+			if($amount === 'all'){
+				$amount = $results->num_rows;
+			}
+			for($i = 0; $i < $amount; $i++){
+				$row = $results->fetch_assoc();
+				echo $row['type'] . " " . $row['tier'] . ": " . $row['farm'] . "<br>";
+			}
 		}
 		else if($type === 'efficiency'){
+			//temp table is to account for A rotation counting twice
+			$con->query("create temporary table rotations select * from endless where rotation='A'");
+			$con->query("insert into rotations select * from endless");
 			//low plat only
 			if($plat === 'low'){
-			$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from endless join parts on ename=name where platinum='low' group by type, tier order by farm desc";
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from rotations join parts on ename=name where platinum='low' group by type, tier order by farm desc";
 			}
 			//low and medium
 			else if($plat === 'med'){
-				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from endless join parts on ename=name where platinum='low' or platinum='med' group by type, tier order by farm desc";
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from rotations join parts on ename=name where platinum='low' or platinum='med' group by type, tier order by farm desc";
 			}
 			//low, medium, and high
 			else if($plat === 'high'){
-				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from endless join parts on ename=name group by type, tier order by farm desc";
+				$sql = "select truncate(sum(ducats * (chance / 100)), 2) as farm, type, tier from rotations join parts on ename=name group by type, tier order by farm desc";
 			}
 			$results = $con->query($sql);
 			echo "Ducats per full rotation:<br>";
-				for($i = 0; $i < $amount; $i++){
-					$row = $results->fetch_assoc();
-					echo $row['type'] . " " . $row['tier'] . ": " . $row['farm'] . "<br>";
-				}
+			if($amount === 'all'){
+				$amount = $results->num_rows;
+			}
+			for($i = 0; $i < $amount; $i++){
+				$row = $results->fetch_assoc();
+				echo $row['type'] . " " . $row['tier'] . ": " . $row['farm'] . "<br>";
+			}
 		}
 	}
 	 
 	//if prime parts bar has been submitted
 	else if(isset($_GET['parts'])){
-		//display the part name, ducats value, and plat price
-		$sql = "select * from parts where name='" . $_GET['part'] . "'";
-		$result = $con->query($sql);
-		for($i = 0; $i < $result->num_rows; $i++) {
-			$row = $result->fetch_assoc();
-			echo $row["name"] . ": " . $row["ducats"] . " ducats, " .$row["platinum"] . " plat<br>";
-			//show any drops from endless towers
-			$sql = "select * from endless where ename='" . $_GET['part'] . "'";
-			$endless = $con->query($sql);
-			for($i = 0; $i < $endless->num_rows; $i++) {
-				$erow = $endless->fetch_assoc();
-				echo $erow['type'] . " " . $erow['tier'] . " rotation " . $erow['rotation'] . ": " . $erow['chance'] . "%<br>";
+		//display each part in the set
+		if(strpos($_GET['part'], ' set') !== false){
+			$parts = $con->query("select part, amount from sets where sname='" . $_GET['part'] . "'");
+			for($i = 0; $i < $parts->num_rows; $i++) {
+				$row = $parts->fetch_assoc();
+				display_part($row['part'], $row['amount']);
 			}
-			//show any drops from not_endless towers
-			$sql = "select * from not_endless where nename='" . $_GET['part'] . "'";
-			$not_endless = $con->query($sql);
-			for($i = 0; $i < $not_endless->num_rows; $i++) {
-				$nerow = $not_endless->fetch_assoc();
-				echo $nerow['type'] . " " . $nerow['tier'] . ": " . $nerow['chance'] . "%<br>";
-			}
+		}
+		//display the single part (amount will always be 1 since it isn't a set)
+		else {
+			display_part($_GET['part'], 1);
 		}
 	}
 	else if(isset($_GET['towers'])){
@@ -177,8 +185,23 @@
 		$tier = $tower[1];
 		//search endless table for all drops
 		if($row['endless']) {
-			echo 'you selected an endless tower.';
-			echo $type . " " . $tier;
+			//function to display drops from a given rotation
+			function endless_drops($rot){
+				global $con, $type, $tier;
+				$drops = $con->query("select * from endless where type='" . $type . "' and tier='" . $tier . "'" . "and rotation='" . $rot . "'");
+				for($i = 0; $i < $drops->num_rows; $i++){
+				$row = $drops->fetch_assoc();
+				echo $row['ename'] . ": " . $row['chance'] . "%<br>";
+				}
+			}
+			echo $type . " " . $tier . "<br>";
+			echo "--rotation A--<br>";
+			endless_drops('A');
+			echo "--rotation B--<br>";
+			endless_drops('B');
+			echo "--rotation C--<br>";
+			endless_drops('C');
+			
 		}
 		//search not_endless table for all drops
 		else {
@@ -186,18 +209,51 @@
 			$drops = $con->query("select * from not_endless where type='" . $type . "' and tier='" . $tier . "'");
 			for($i = 0; $i < $drops->num_rows; $i++){
 				$row = $drops->fetch_assoc();
-				echo $row['nename'] . ": " . $row['chance'] . "<br>";
+				echo $row['nename'] . ": " . $row['chance'] . "%<br>";
 			}
 		}
+	}
+	
+	//displays the prime part (name, ducats, plat value, drops)
+	function display_part($part, $num) {
+		global $con;
+		//display the part name, ducats value, and plat price
+		$sql = "select * from parts where name='" . $part . "'";
+		$result = $con->query($sql);
+		for($i = 0; $i < $result->num_rows; $i++) {
+			$row = $result->fetch_assoc();
+			echo $row["name"] . ": " . $row["ducats"] . " ducats, " .$row["platinum"] . " plat";
+			//show amount if greater than 1
+			if($num > 1){
+				echo " (" . $num . " required)";
+			}
+			echo "<br>";
+			//show any drops from endless towers
+			$sql = "select * from endless where ename='" . $part . "'";
+			$endless = $con->query($sql);
+			for($i = 0; $i < $endless->num_rows; $i++) {
+				$erow = $endless->fetch_assoc();
+				echo $erow['type'] . " " . $erow['tier'] . " rotation " . $erow['rotation'] . ": " . $erow['chance'] . "%<br>";
+			}
+			//show any drops from not_endless towers
+			$sql = "select * from not_endless where nename='" . $part . "'";
+			$not_endless = $con->query($sql);
+			for($i = 0; $i < $not_endless->num_rows; $i++) {
+				$nerow = $not_endless->fetch_assoc();
+				echo $nerow['type'] . " " . $nerow['tier'] . ": " . $nerow['chance'] . "%<br>";
+			}
+			if($endless->num_rows == 0 and $not_endless->num_rows == 0){
+				echo "vaulted";
+			}
+		}
+		echo "<br>";
 	}
 	?>
 	
 	<p> To do: </p>
-	<p> allow to search by set </p>
 	<p> allow multiple search items, or new searches to be added on to the bottom </p>
 	<p> endless ducats shows breakdown by each rotation </p>
 	<p> old searches still visible </p>
-	<p> fill the database </p>
 	
  </body>
 </html>

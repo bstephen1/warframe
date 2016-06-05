@@ -16,6 +16,8 @@
 		
 		//create connection
 		$con = new mysqli($servername, $username, $password, $db);
+		
+		
 	?>
 		
 	
@@ -156,16 +158,20 @@
 	//if prime parts bar has been submitted
 	else if(isset($_GET['parts'])){
 		//display each part in the set
-		if(strpos($_GET['part'], ' set') !== false){
-			$parts = $con->query("select part, amount from sets where sname='" . $_GET['part'] . "'");
-			for($i = 0; $i < $parts->num_rows; $i++) {
-				$row = $parts->fetch_assoc();
-				display_part($row['part'], $row['amount']);
+		$allparts = (array)$_GET['part'];
+		echo implode(', ', $allparts) . "<br>";
+		foreach($allparts as $part){
+			if(strpos($part, ' set') !== false){
+				$parts = $con->query("select part, amount from sets where sname='" . $part . "'");
+				for($i = 0; $i < $parts->num_rows; $i++) {
+					$row = $parts->fetch_assoc();
+					display_part($row['part'], $row['amount']);
+				}
 			}
-		}
-		//display the single part (amount will always be 1 since it isn't a set)
-		else {
-			display_part($_GET['part'], 1);
+			//display the single part (amount will always be 1 since it isn't a set)
+			else {
+				display_part($_GET['part'], 1);
+			}
 		}
 	}
 	else if(isset($_GET['towers'])){
@@ -254,6 +260,9 @@
 	<p> allow multiple search items, or new searches to be added on to the bottom </p>
 	<p> endless ducats shows breakdown by each rotation </p>
 	<p> old searches still visible </p>
-	
+	<?php /*
+	<img src='images/ducats.png'>
+	<img src='images/platinum.png'>
+	*/ ?>
  </body>
 </html>

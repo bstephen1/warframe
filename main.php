@@ -103,8 +103,13 @@
 	
 	<div id='text' style='float:left;'>
 		<?php 
+		//for the help message that only displays when no forms are submitted
+		$partsb = true;
+		$towerb = true;
+		$ducatsb = true;
 		//if ducats form has been submitted
 		if(isset($_GET['type']) and isset($_GET['plat']) and isset($_GET['amount'])){
+			$ducatsb = false;
 			$type = $_GET['type'];
 			$plat = $_GET['plat'];
 			$amount = $_GET['amount'];
@@ -164,6 +169,7 @@
 		 
 		//if prime parts bar has been submitted
 		if(isset($_GET['part'])){
+			$partsb = false;
 			foreach($_GET['part'] as $part){
 				//display each part in the set
 				if(strpos($part, ' set') !== false){
@@ -181,6 +187,7 @@
 			}
 		}
 		if(isset($_GET['tower'])){
+			$towerb = false;
 			//function to display drops from a given rotation
 			function endless_drops($rot){
 				global $con, $type, $tier;
@@ -261,6 +268,11 @@
 				}
 			}
 			echo "<br>";
+		}
+		
+		//help message that displays when no forms have been submitted
+		if($partsb and $towerb and $ducatsb) {
+			echo "Select any combination of prime parts, towers, or ducats to perform a search.<br>Prime parts will show the ducat value, platinum value, and any drop locations.<br>Towers will show all drops for the tower.<br>Ducats shows the best tower to go for ducats based on the options given.";
 		}
 		?>
 	</div>

@@ -1,0 +1,29 @@
+
+.headerStyle {
+	font-weight: bold;
+	color: black;
+	font-size: 200%;
+}
+
+.wrapper {
+	float:left;
+	width: 18000000px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+}
+
+
+.ducBox {
+	padding-bottom: 4px;
+}
+
+#text {
+	padding: 5px 5px 5px 5px;
+}
+
+#version {
+	position: fixed;
+	bottom: 0px;
+	right: 10px;
+	color: grey;
+}
